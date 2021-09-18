@@ -4,54 +4,116 @@
     align-items: center;
     width: 100%;
     min-height: 136px;
+    overflow: hidden;
     .header__inner {
         display: flex;
         height: 100%;
         justify-content: space-between;
         align-items: center;
-        .header__nav {
-            ul {
-                display: flex;
-                justify-content: space-between;
-                width: 451px;
-                li {
-                    .header__nav-item {
-                        color: $lblack;
-                        font-family: Rubik-Regular;
-                        font-size: 1rem;
-                        transition: 0.2s;
-                        &:hover {
-                            color: $red;
+        @media screen and (max-width: 1155px) {
+            margin: 0 15px;
+        }
+        ._active {
+            transform: translateX(-100vw);
+        }
+        .header__nav-btns-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 72%;
+            transition: 0.5s;
+            @media screen and (max-width: 1155px) {
+                width: 76%;
+            }
+            @media screen and (max-width: 950px) {
+                width: 1px;
+            }
+            .header__nav {
+                ul {
+                    display: flex;
+                    justify-content: space-between;
+                    width: 451px;
+                    @media screen and (max-width: 950px) {
+                        position: absolute;
+                        width: 80vw;
+                        height: 100vh;
+                        top: -38px;
+                        right: 0px;
+                        flex-direction: column;
+                        background-color: bisque;
+                        transform: translateX(100vw);
+                    }
+                    li {
+                        .header__nav-item {
+                            color: $lblack;
+                            font-family: Rubik-Regular;
+                            font-size: 1rem;
+                            transition: 0.2s;
+                            @media screen and (max-width: 950px) {
+                                font-size: 3rem;
+                            }
+                            &:hover {
+                                color: $red;
+                            }
                         }
                     }
                 }
             }
-        }
-        .header__btns {
-            display: flex;
-            .header__signin {
-                padding: 13px 30px;
-                color: $black;
-                font-family: Rubik-Medium;
-                font-size: 1rem;
-                transition: 0.5s;
-                &:hover {
-                    transform: translateY(-3px);
+            .header__btns {
+                display: flex;
+                @media screen and (max-width: 950px) {
+                    position: absolute;
+                    top: 100px;
+                }
+                .header__signin {
+                    padding: 13px 30px;
+                    color: $black;
+                    font-family: Rubik-Medium;
+                    font-size: 1rem;
+                    transition: 0.5s;
+                    &:hover {
+                        transform: translateY(-3px);
+                        color: $red;
+                    }
+                }
+                .header__signup {
+                    padding: 13px 30px;
                     color: $red;
+                    font-family: Rubik-Medium;
+                    font-size: 1rem;
+                    border: 1px solid $red;
+                    border-radius: 50px;
+                    transition: 0.2s;
+                    &:hover {
+                        color: white;
+                        background-color: $red;
+                    }
                 }
             }
-            .header__signup {
-                padding: 13px 30px;
-                color: $red;
-                font-family: Rubik-Medium;
-                font-size: 1rem;
-                border: 1px solid $red;
-                border-radius: 50px;
-                transition: 0.2s;
-                &:hover {
-                    color: white;
-                    background-color: $red;
-                }
+        }
+        .header__burger {
+            display: none;
+            width: 40px;
+            height: 3px;
+            background-color: black;
+            @media screen and (max-width: 950px) {
+                display: block;
+            }
+            &::before {
+                content: '';
+                position: absolute;
+                transform: translateY(-10px);
+                width: 40px;
+                height: 3px;
+                background-color: black;
+            }
+            &::after {
+                content: '';
+                position: absolute;
+                transform: translateY(10px);
+                width: 40px;
+                height: 3px;
+                background-color: black;
             }
         }
     }

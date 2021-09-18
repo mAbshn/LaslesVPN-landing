@@ -190,6 +190,7 @@ a {
           align-items: center;
   width: 100%;
   min-height: 136px;
+  overflow: hidden;
 }
 
 .header .header__inner {
@@ -205,7 +206,29 @@ a {
           align-items: center;
 }
 
-.header .header__inner .header__nav ul {
+.header .header__inner ._active {
+  -webkit-transform: translateX(-100vw);
+      -ms-transform: translateX(-100vw);
+          transform: translateX(-100vw);
+}
+
+.header .header__inner .header__nav-btns-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 72%;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.header .header__inner .header__nav-btns-wrapper .header__nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -215,7 +238,7 @@ a {
   width: 451px;
 }
 
-.header .header__inner .header__nav ul li .header__nav-item {
+.header .header__inner .header__nav-btns-wrapper .header__nav ul li .header__nav-item {
   color: #4F5665;
   font-family: Rubik-Regular;
   font-size: 1rem;
@@ -224,17 +247,17 @@ a {
   transition: 0.2s;
 }
 
-.header .header__inner .header__nav ul li .header__nav-item:hover {
+.header .header__inner .header__nav-btns-wrapper .header__nav ul li .header__nav-item:hover {
   color: #F53838;
 }
 
-.header .header__inner .header__btns {
+.header .header__inner .header__nav-btns-wrapper .header__btns {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.header .header__inner .header__btns .header__signin {
+.header .header__inner .header__nav-btns-wrapper .header__btns .header__signin {
   padding: 13px 30px;
   color: #0B132A;
   font-family: Rubik-Medium;
@@ -244,14 +267,14 @@ a {
   transition: 0.5s;
 }
 
-.header .header__inner .header__btns .header__signin:hover {
+.header .header__inner .header__nav-btns-wrapper .header__btns .header__signin:hover {
   -webkit-transform: translateY(-3px);
       -ms-transform: translateY(-3px);
           transform: translateY(-3px);
   color: #F53838;
 }
 
-.header .header__inner .header__btns .header__signup {
+.header .header__inner .header__nav-btns-wrapper .header__btns .header__signup {
   padding: 13px 30px;
   color: #F53838;
   font-family: Rubik-Medium;
@@ -263,7 +286,81 @@ a {
   transition: 0.2s;
 }
 
-.header .header__inner .header__btns .header__signup:hover {
+.header .header__inner .header__nav-btns-wrapper .header__btns .header__signup:hover {
   color: white;
   background-color: #F53838;
+}
+
+.header .header__inner .header__burger {
+  display: none;
+  width: 40px;
+  height: 3px;
+  background-color: black;
+}
+
+.header .header__inner .header__burger::before {
+  content: "";
+  position: absolute;
+  -webkit-transform: translateY(-10px);
+      -ms-transform: translateY(-10px);
+          transform: translateY(-10px);
+  width: 40px;
+  height: 3px;
+  background-color: black;
+}
+
+.header .header__inner .header__burger::after {
+  content: "";
+  position: absolute;
+  -webkit-transform: translateY(10px);
+      -ms-transform: translateY(10px);
+          transform: translateY(10px);
+  width: 40px;
+  height: 3px;
+  background-color: black;
+}
+
+@media screen and (max-width: 1155px) {
+  .header .header__inner {
+    margin: 0 15px;
+  }
+
+  .header .header__inner .header__nav-btns-wrapper {
+    width: 76%;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .header .header__inner .header__nav-btns-wrapper {
+    width: 1px;
+  }
+
+  .header .header__inner .header__nav-btns-wrapper .header__nav ul {
+    position: absolute;
+    width: 80vw;
+    height: 100vh;
+    top: -38px;
+    right: 0px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: bisque;
+    -webkit-transform: translateX(100vw);
+        -ms-transform: translateX(100vw);
+            transform: translateX(100vw);
+  }
+
+  .header .header__inner .header__nav-btns-wrapper .header__nav ul li .header__nav-item {
+    font-size: 3rem;
+  }
+
+  .header .header__inner .header__nav-btns-wrapper .header__btns {
+    position: absolute;
+    top: 100px;
+  }
+
+  .header .header__inner .header__burger {
+    display: block;
+  }
 }
