@@ -1,0 +1,81 @@
+.features {
+    margin-top: 150px;
+    margin-bottom: 73px;
+    .features__wrapper {
+        display: flex;
+        justify-content: center;
+        @media screen and (max-width: 950px) {
+            flex-direction: column;
+        }
+        .features__image {
+            margin-left: 34px;
+            flex-basis: 54.3%;
+            @media screen and (max-width: 950px) {
+                position: relative;
+                margin: 0 auto;
+            }
+            img {
+                position: relative;
+                margin: 0 auto;
+                bottom: 54px;
+                height: 100%;
+                width: 100%;
+                object-fit: contain;
+                @media screen and (max-width: 950px) {
+                    width: 100%;
+                }
+            }
+        }
+        .features__textblock {
+            margin-left: 170px;
+            flex-basis: 45.7%;
+            @media screen and (max-width: 950px) {
+                margin: 0;
+            }
+            .features__capture {
+                width: 90%;
+                font-family: Rubik-Medium;
+                font-size: 2.1875rem;
+                line-height: 3.125rem;
+                @media screen and (max-width: 950px) {
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+            .features__text {
+                margin-top: 1.25rem;
+                line-height: 1.875rem;
+                @media screen and (max-width: 950px) {
+                    margin-left: 5%;
+                }
+            }
+            .features__features {
+                position: relative;
+                margin-top: 1.25rem;
+                @media screen and (max-width: 950px) {
+                    margin-left: 5%;
+                }
+                & > li {
+                    margin-bottom: 15px;
+                    font-size: 0.875rem;
+                    line-height: 30px;
+                    vertical-align: middle;
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                    &::before {
+                        content: '';
+                        position: relative;
+                        margin-right: 10px;
+                        display: inline-block;
+                        width: 24px;
+                        height: 24px;
+                        vertical-align: middle;
+                        background: url('../img/list-marker.svg');
+                        transform: translateY(-1px);
+                    }
+                }
+            }
+        }
+    }
+}

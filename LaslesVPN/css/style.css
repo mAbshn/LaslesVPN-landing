@@ -184,6 +184,11 @@ html body {
   font-family: Rubik-Regular;
 }
 
+html body._noscroll {
+  height: 100vh;
+  overflow: hidden;
+}
+
 html body .container {
   position: relative;
   margin: 0 auto;
@@ -495,6 +500,84 @@ html body .container {
   border-right: 2px solid #EEEFF2;
 }
 
+.features {
+  margin-top: 150px;
+  margin-bottom: 73px;
+}
+
+.features .features__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.features .features__wrapper .features__image {
+  margin-left: 34px;
+  -ms-flex-preferred-size: 54.3%;
+      flex-basis: 54.3%;
+}
+
+.features .features__wrapper .features__image img {
+  position: relative;
+  margin: 0 auto;
+  bottom: 54px;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.features .features__wrapper .features__textblock {
+  margin-left: 170px;
+  -ms-flex-preferred-size: 45.7%;
+      flex-basis: 45.7%;
+}
+
+.features .features__wrapper .features__textblock .features__capture {
+  width: 90%;
+  font-family: Rubik-Medium;
+  font-size: 2.1875rem;
+  line-height: 3.125rem;
+}
+
+.features .features__wrapper .features__textblock .features__text {
+  margin-top: 1.25rem;
+  line-height: 1.875rem;
+}
+
+.features .features__wrapper .features__textblock .features__features {
+  position: relative;
+  margin-top: 1.25rem;
+}
+
+.features .features__wrapper .features__textblock .features__features > li {
+  margin-bottom: 15px;
+  font-size: 0.875rem;
+  line-height: 30px;
+  vertical-align: middle;
+}
+
+.features .features__wrapper .features__textblock .features__features > li:last-child {
+  margin-bottom: 0;
+}
+
+.features .features__wrapper .features__textblock .features__features > li::before {
+  content: "";
+  position: relative;
+  margin-right: 10px;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  background: url("../img/list-marker.svg");
+  -webkit-transform: translateY(-1px);
+      -ms-transform: translateY(-1px);
+          transform: translateY(-1px);
+}
+
 @media screen and (max-width: 1140px) {
   html body .container {
     margin: 0 15px;
@@ -560,6 +643,39 @@ html body .container {
 
   .header .header__inner .header__burger {
     display: block;
+  }
+
+  .features .features__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .features .features__wrapper .features__image {
+    position: relative;
+    margin: 0 auto;
+  }
+
+  .features .features__wrapper .features__image img {
+    width: 100%;
+  }
+
+  .features .features__wrapper .features__textblock {
+    margin: 0;
+  }
+
+  .features .features__wrapper .features__textblock .features__capture {
+    width: 100%;
+    text-align: center;
+  }
+
+  .features .features__wrapper .features__textblock .features__text {
+    margin-left: 5%;
+  }
+
+  .features .features__wrapper .features__textblock .features__features {
+    margin-left: 5%;
   }
 }
 
