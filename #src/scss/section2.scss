@@ -34,17 +34,12 @@
             }
             .features__capture {
                 width: 90%;
-                font-family: Rubik-Medium;
-                font-size: 2.1875rem;
-                line-height: 3.125rem;
                 @media screen and (max-width: 950px) {
                     width: 100%;
                     text-align: center;
                 }
             }
             .features__text {
-                margin-top: 1.25rem;
-                line-height: 1.875rem;
                 @media screen and (max-width: 950px) {
                     margin-left: 5%;
                 }

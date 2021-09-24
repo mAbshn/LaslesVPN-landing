@@ -20,9 +20,6 @@
                 }
             }
             .intro__text {
-                margin-top: 1.25rem;
-                font-size: 1rem;
-                line-height: 1.875rem;
                 @media screen and (max-width: 755px) {
                     text-align: center;
                 }
@@ -42,22 +39,21 @@
                 @media screen and (max-width: 755px) {
                     margin: 3.125rem auto 0 auto;
                 }
-                &:hover::after {
-                    transform: translateY(-0.625rem);
-                    filter: blur(27px);
-                }
                 &::after {
                     content: '';
                     position: absolute;
                     left: 1.2185rem;
                     top: 1.581rem;
                     width: 13.188rem;
-                    height: 3.75rem;
+                    height: 0;
                     z-index: -1;
                     background: rgba(245, 56, 56, 0.35);
                     filter: blur(54px);
                     border-radius: 10px;
                     transition: 0.3s;
+                }
+                &:hover::after {
+                    height: 3.75rem;
                 }
             }
             span {

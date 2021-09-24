@@ -36,9 +36,27 @@ html {
                 width: calc(100% - 30px);
             }
         }
+        .background-gradient {
+            background: linear-gradient(180deg, #F8F8F8 -45.04%, rgba(248, 248, 248, 0) 88.56%);
+        }
+        .capture {
+            font-family: Rubik-Medium;
+            font-size: 2.1875rem;
+            line-height: 3.125rem;
+            color: $black;
+        }
+        .capture-text {
+            margin-top: 1.25rem;
+            line-height: 1.875rem;
+            font-size: 1rem;
+            color: $lblack;
+        }
     }
 }
 
 @import "header";
 @import "section1";
 @import "section2";
+@import "section3";
+@import "section4";
+@import "section5";

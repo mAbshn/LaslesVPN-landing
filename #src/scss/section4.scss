@@ -1,0 +1,31 @@
+.global {
+    margin-top: 150px;
+    .global__capture {
+        position: relative;
+        max-width: 384px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .global__text {
+        position: relative;
+        max-width: 555px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+    .global__image {
+        margin-top: 156px;
+        text-align: center;
+        @media screen and (max-width: 755px) {
+            margin-top: 100px;
+        }
+    }
+    .global__sponsors {
+        margin-top: 36px;
+        text-align: center;
+    }
+    img {
+        height: 100%;
+        width: 100%;
+    }
+}
