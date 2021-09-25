@@ -11,10 +11,10 @@
     })
     for (let li of list) {
         li.addEventListener('click', () => {
-            menu.classList.toggle('_active');
-            btns.classList.toggle('_active');
-            burger.classList.toggle('_active');
-            document.body.classList.toggle('_noscroll');
+            menu.classList.remove('_active');
+            btns.classList.remove('_active');
+            burger.classList.remove('_active');
+            document.body.classList.remove('_noscroll');
         })
     }
 })();
