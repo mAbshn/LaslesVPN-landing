@@ -20,9 +20,10 @@
                 padding-top: 100px;
                 width: 80vw;
                 height: 100vh;
-                background-color: rgba(255,192,189,0.95);
+                background-color: rgba(255,192,189,0.98);
                 transition: 0.5s;
                 transform: translateX(100vw);
+                overflow-y: scroll;
                 z-index: 2;
             }
             &._active {
@@ -36,7 +37,7 @@
                 }
                 li {
                     @media screen and (max-width: 950px) {
-                        margin: 20px;
+                        margin: 2.5vh;
                         padding: 10px;
                         border-bottom: 1px solid $lblack;
                     }
@@ -59,14 +60,15 @@
             align-items: center;
             @media screen and (max-width: 950px) {
                 position: absolute;
-                top: 550px;
+                top: 80vh;
                 left: 60%;
+                width: 260px;
                 transform: translate(100vw, 0);
                 z-index: 3;
                 transition: 0.5s;
-            }
-            &._active {
-                transform: translate(calc(-50% + 15px), 0);
+                &._active {
+                    transform: translate(calc(-50% + 5px), 0);
+                }
             }
             .header__signin {
                 margin-right: 30px;
@@ -100,6 +102,7 @@
                 }
                 @media screen and (max-width: 950px) {
                     font-size: 1.5rem;
+                    border-radius: 20px;
                 }
             }
         }
