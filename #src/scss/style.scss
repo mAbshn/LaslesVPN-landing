@@ -31,7 +31,7 @@ html {
             margin: 0 auto;
             height: 100%;
             width: 1140px;
-            @media screen and (max-width: 1140px) {
+            @media screen and (max-width: 1155px) {
                 margin: 0 15px;
                 width: calc(100% - 30px);
             }
@@ -60,3 +60,4 @@ html {
 @import "section3";
 @import "section4";
 @import "section5";
+@import "footer";

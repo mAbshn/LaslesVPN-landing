@@ -1,5 +1,6 @@
 .testimonials {
     margin-top: 50px;
+    margin-bottom: 69px;
     .testimonials__capture {
         max-width: 448px;
         margin: 0 auto;
@@ -10,5 +11,186 @@
         margin-left: auto;
         margin-right: auto;
         text-align: center;
+    }
+    .swiper {
+        margin-top: 60px;
+        width: 100%;
+        overflow: unset;
+        @media screen and (max-width: 1155px) {
+            width: calc(100vw - 30px);
+        }
+        .swiper-wrapper {
+            min-height: 254px;
+            align-items: stretch;
+            .swiper-slide {
+                padding: 30px;;
+                height: auto;
+                border: 2px solid #DDDDDD;
+                border-radius: 10px;
+                // &-active {
+                //     border: 2px solid $red;
+                //     box-shadow: 0 70px 114px 0 rgba(0,0,0,0.06);
+                // }
+                .swiper__person-wrapper {
+                    margin-bottom: 20px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    .swiper__person {
+                        display: flex;
+                        & > img {
+                            margin-right: 20px;
+                            width: 50px;
+                            height: 50px;
+                        }
+                        .swiper__name-country {
+                            margin-top: 6.5px;
+                            margin-right: 10px;
+                            .swiper__name {
+                                font-family: Rubik-Medium;
+                                font-size: 1.125rem;
+                                color: $black;
+                            }
+                            .swiper__country {
+                                margin-top: 0.3125rem;
+                                font-size: 0.875rem;
+                                color: $lblack;
+                            }
+                        }
+                    }
+                    .swiper__stars {
+                        color: $black;
+                        &::after {
+                            content: '';
+                            display: inline-block;
+                            margin-left: 0.625rem;
+                            position: relative;
+                            width: 16px;
+                            height: 16px;
+                            transform: translateY(1px);
+                            background: url(../img/star.svg);
+                        }
+                    }
+                }
+                .swiper__text {
+                    color: $black;
+                    font-size: 1rem;
+                    line-height: 1.875rem;
+                }
+            }
+        }
+        .swiper-pagination {
+            text-align: left;
+            bottom: -97.5px;
+            height: 15px;
+            .swiper-pagination-bullet {
+                margin: 0 15px 0 0;
+                height: 15px;
+                width: 15px;
+                transition: 0.2s;
+                &-active {
+                    width: 45px;
+                    background-color: $red;
+                    border-radius: 7.5px;
+                }
+            }
+        }
+        .swiper-button-prev {
+            position: absolute;
+            top: calc(85px + 100%);
+            left: 1000px;
+            width: 60px;
+            height: 60px;
+            opacity: 1;
+            @media screen and (max-width: 1155px) {
+                left: calc(100vw - 170px);
+            }
+            &::after {
+                content: '';
+                width: 60px;
+                height: 60px;
+                background: url(../img/left.svg);
+                transition: 0.2s;
+            }
+            &:hover::after {
+                background: url(../img/left-active.svg);
+            }
+        }
+        .swiper-button-next {
+            position: absolute;
+            top: calc(85px + 100%);
+            left: 1080px;
+            width: 60px;
+            height: 60px;
+            opacity: 1;
+            @media screen and (max-width: 1155px) {
+                left: calc(100vw - 90px);
+            }
+            &::after {
+                content: '';
+                width: 60px;
+                height: 60px;
+                background: url(../img/right.svg);
+                transition: 0.2s;
+            }
+            &:hover::after {
+                content: '';
+                width: 60px;
+                height: 60px;
+                background: url(../img/right-active.svg);
+            }
+        }
+    }
+    .testimonials__subscribe {
+        position: relative;
+        top: 185px;
+        padding: 58.5px 70px;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 33.5px 114px 0 rgba(0,0,0,0.06);
+        z-index: 10;
+        @media screen and (max-width: 950px) {
+            flex-direction: column;
+        }
+        @media screen and (max-width: 550px) {
+            padding: 40px;
+        }
+        .testimonials__subscribe-text {
+            max-width: 372px;
+            .testimonials__subscribe-caption {
+                text-align: left;
+                line-height: 40px;
+                @media screen and (max-width: 950px) {
+                    text-align: center;
+                }
+            }
+            .testimonials__subscribe-caption-text {
+                text-align: left;
+                line-height: unset;
+                @media screen and (max-width: 950px) {
+                    text-align: center;
+                    margin-bottom: 30px;
+                }
+            }
+        }
+        .testimonials__subscribe-btn {
+            padding: 1.094rem 0;
+            width: 15.625rem;
+            font-family: Rubik-Bold;
+            font-size: 1rem;
+            line-height: 1.5625rem;
+            text-align: center;
+            color: white;
+            background-color: $red;
+            border-radius: 0.625rem;
+            transition: 0.3s;
+            &:hover {
+                box-shadow: 0 25px 54px 0 rgba(245, 56, 56, 0.35);
+            }
+        }
     }
 }
